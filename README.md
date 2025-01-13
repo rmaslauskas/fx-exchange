@@ -11,7 +11,7 @@ The application is a Foreign Exchange (FX) Conversion System designed to facilit
 ## Building Solution
 
 ```bash
-git clone [https://github.com/rmaslauskas/fx-exchange.git]
+git clone https://github.com/rmaslauskas/fx-exchange.git
 cd ./fx-exchange
 dotnet restore
 dotnet build
@@ -21,7 +21,7 @@ dotnet build
 
 ```bash
 cd ./Exchange.Application/bin/Debug/net8.0
-./Exchange.Application.exe EUR/DKK 1  
+Exchange.Application.exe EUR/DKK 1  
 ```
 
 ## Configuration
