@@ -42,7 +42,7 @@
         {
             var currencyPair = "EUR/DKK";
 
-            var result = await _currencyPairFactory.CreateCurrencyPair(currencyPair);
+            var result = await _currencyPairFactory.CreateCurrencyPairAsync(currencyPair);
 
             result.PrimaryCurrency.Should().Be("EUR");
             result.SecondaryCurrency.Should().Be("DKK");
@@ -54,7 +54,7 @@
         {
             var currencyPair = "CHF/DKK";
 
-            var result = await _currencyPairFactory.CreateCurrencyPair(currencyPair);
+            var result = await _currencyPairFactory.CreateCurrencyPairAsync(currencyPair);
 
             result.PrimaryCurrency.Should().Be("CHF");
             result.SecondaryCurrency.Should().Be("DKK");
@@ -66,7 +66,7 @@
         {
             var currencyPair = "DKK/CHF";
 
-            var result = await _currencyPairFactory.CreateCurrencyPair(currencyPair);
+            var result = await _currencyPairFactory.CreateCurrencyPairAsync(currencyPair);
 
             result.PrimaryCurrency.Should().Be("DKK");
             result.SecondaryCurrency.Should().Be("CHF");
@@ -78,7 +78,7 @@
         {
             var currencyPair = "DKK/EUR";
 
-            var result = await _currencyPairFactory.CreateCurrencyPair(currencyPair);
+            var result = await _currencyPairFactory.CreateCurrencyPairAsync(currencyPair);
 
             result.PrimaryCurrency.Should().Be("DKK");
             result.SecondaryCurrency.Should().Be("EUR");
@@ -91,7 +91,7 @@
         [TestCase("EUR/DKK")]
         public async Task CreateCurrencyPair_PassedCorrectCurrencyPairAsString_CurrencyPairReturned(string currencyPair)
         {
-            var result = await _currencyPairFactory.CreateCurrencyPair(currencyPair);
+            var result = await _currencyPairFactory.CreateCurrencyPairAsync(currencyPair);
 
             result.Should().NotBeNull();
             result.ExchangeRate.Should().BeGreaterThan(0);

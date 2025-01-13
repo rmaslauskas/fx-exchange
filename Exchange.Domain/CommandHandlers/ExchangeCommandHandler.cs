@@ -22,7 +22,7 @@
         public async Task<ValidateableResponse<ResultDto>> Handle(CalculateExchangeCommand request, CancellationToken cancellationToken)
         {
             var amountDecimal = decimal.Parse(request.Amount, CultureInfo.InvariantCulture);
-            var currencyPair = await _currencyPairFactory.CreateCurrencyPair(request.CurrencyPair);
+            var currencyPair = await _currencyPairFactory.CreateCurrencyPairAsync(request.CurrencyPair);
 
             var convertedAmount = decimal.Round(currencyPair.ExchangeRate * amountDecimal, 2, MidpointRounding.ToZero);
 

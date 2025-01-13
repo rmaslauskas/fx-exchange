@@ -10,8 +10,6 @@
     {
         public CalculateExchangeCommandValidator()
         {
-            this.CascadeMode = CascadeMode.StopOnFirstFailure;
-
             When(x => x.Amount != null && x.CurrencyPair != null, () =>
             {
                 RuleFor(c => c.Amount)

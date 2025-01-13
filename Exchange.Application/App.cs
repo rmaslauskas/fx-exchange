@@ -26,11 +26,17 @@
             commandLineApplication.OnExecute(
                 async () =>
                 {
-                    var result = await _mediator.Send(new CalculateExchangeCommand(currencyPairString.Value, amount.Value));
+                    try
+                    {
+                        var result = await _mediator.Send(new CalculateExchangeCommand(currencyPairString.Value, amount.Value));
 
-                    Console.WriteLine(result.IsValidResponse ?
-                        result.Result.Amount.ToString("N2", CultureInfo.InvariantCulture) :
-                        $"Exception: {result.Errors.First()}");
+                        Console.WriteLine(result.IsValidResponse ?
+                            result.Result.Amount.ToString("N2", CultureInfo.InvariantCulture) :
+                            $"Validation Error: {result.Errors.First()}");
+                    }catch(Exception ex)
+                    {
+                        Console.WriteLine($"Exception: {ex.Message}");
+                    }
 
                     return 0;
                 });

@@ -18,7 +18,7 @@
             _exchangeRatesService = exchangeRatesService;
         }
 
-        public async Task<CurrencyPairResult?> CreateCurrencyPair(string currencyPair)
+        public async Task<CurrencyPairResult> CreateCurrencyPairAsync(string currencyPair)
         {
             var primaryCurrencyCode = currencyPair.Split("/")[0];
             var secondaryCurrencyCode = currencyPair.Split("/")[1];
@@ -26,7 +26,7 @@
 
             var currencyPairs = await _exchangeRatesService.GetCurrencyPairsAsync(primaryCurrencyCode);
 
-            if (currencyPairs == null) throw new Exception();
+            if (currencyPairs?.BaseCode == null) throw new Exception("Can't retrieve the currency pairs from API!");
 
             if (currencyPairs.BaseCode.Equals(primaryCurrencyCode))
             {

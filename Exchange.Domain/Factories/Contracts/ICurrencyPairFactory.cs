@@ -5,6 +5,6 @@
 
     public interface ICurrencyPairFactory
     {
-        public Task<CurrencyPairResult> CreateCurrencyPair(string currencyPair);
+        public Task<CurrencyPairResult> CreateCurrencyPairAsync(string currencyPair);
     }
 }

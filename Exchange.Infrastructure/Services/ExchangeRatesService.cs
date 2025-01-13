@@ -23,14 +23,7 @@ namespace Exchange.Infrastructure.Services
 
         private CurrencyPairs? ConvertToCurrencyPairs(string jsonResponse)
         {
-            try
-            {
-                return JsonSerializer.Deserialize<CurrencyPairs>(jsonResponse);
-            }
-            catch (Exception)
-            {
-                return null;
-            }     
+            return JsonSerializer.Deserialize<CurrencyPairs>(jsonResponse) ?? null;   
         }
 
     }

@@ -21,7 +21,7 @@
         {
             _currencyPairFactory = Substitute.For<ICurrencyPairFactory>();
 
-            _currencyPairFactory.CreateCurrencyPair(Arg.Any<string>())
+            _currencyPairFactory.CreateCurrencyPairAsync(Arg.Any<string>())
               .Returns(new CurrencyPairResult { PrimaryCurrency = "EUR", SecondaryCurrency = "DKK", ExchangeRate = 1.7m });
 
             _sut = new ExchangeCommandHandler(_currencyPairFactory);
@@ -35,7 +35,7 @@
 
             var result = await _sut.Handle(command, CancellationToken.None);
 
-            _currencyPairFactory.Received().CreateCurrencyPair(currencyPair);
+            await _currencyPairFactory.Received().CreateCurrencyPairAsync(currencyPair);
         }
 
         [Test]
@@ -47,7 +47,7 @@
             var result = await _sut.Handle(command, CancellationToken.None);
 
             result.Result.Amount.Should().Be(170);
-            _currencyPairFactory.Received().CreateCurrencyPair(Arg.Any<string>());
+            await _currencyPairFactory.Received().CreateCurrencyPairAsync(Arg.Any<string>());
         }
     }
 }
