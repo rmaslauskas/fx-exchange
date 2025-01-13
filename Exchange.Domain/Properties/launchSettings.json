@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Exchange.Domain": {
+      "commandName": "Project"
+    }
+  }
+}

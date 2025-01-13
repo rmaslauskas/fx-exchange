@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Exchange.Application": {
+      "commandName": "Project",
+      "commandLineArgs": "CHF/USD 100"
+    }
+  }
+}

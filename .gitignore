@@ -1,0 +1,9 @@
+.vs/
+Exchange.Application/bin/
+Exchange.Application/obj/
+Exchange.Domain/bin/
+Exchange.Domain/obj/
+Exchange.Domain.UnitTests/bin/
+Exchange.Domain.UnitTests/obj/
+Exchange.Infrastructure/bin/
+Exchange.Infrastructure/obj/
