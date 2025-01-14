@@ -1,4 +1,4 @@
-﻿namespace Exchange.Domain.Factories.Contracts
+﻿namespace Exchange.Domain.Contracts
 {
     using Exchange.Domain.DTOs;
     using System.Threading.Tasks;

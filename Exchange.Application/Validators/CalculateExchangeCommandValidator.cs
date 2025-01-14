@@ -1,8 +1,8 @@
-﻿namespace Exchange.Domain.Validators
+﻿namespace Exchange.Application.Validators
 {
     using System;
     using System.Globalization;
-    using Exchange.Domain.Commands;
+    using Exchange.Application.Commands;
     using Exchange.Domain.Enums;
     using FluentValidation;
 

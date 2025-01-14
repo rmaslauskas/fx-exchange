@@ -16,5 +16,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Exchange.Domain\Exchange.Domain.csproj" />
+		<ProjectReference Include="..\Exchange.Infrastructure\Exchange.Infrastructure.csproj" />
 	</ItemGroup>
 </Project>

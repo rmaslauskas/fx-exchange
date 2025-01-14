@@ -28,7 +28,7 @@
 
             services.AddSingleton<IConfiguration>(configuration);
             services.AddTransient<App>();
-            services.AddDomainModule();
+            services.AddApplicationServices();
             services.AddInfrastructureModule(configuration);
         }
     }

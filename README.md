@@ -20,8 +20,8 @@ dotnet build
 ## Running Solution
 
 ```bash
-cd ./Exchange.Application/bin/Debug/net8.0
-Exchange.Application.exe EUR/DKK 1  
+cd ./Exchange.ConsoleApp/bin/Debug/net8.0
+Exchange.exe EUR/DKK 1  
 ```
 
 ## Configuration

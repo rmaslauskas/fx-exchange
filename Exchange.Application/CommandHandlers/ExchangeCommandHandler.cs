@@ -1,13 +1,13 @@
-﻿namespace Exchange.Domain.CommandHandlers
+﻿namespace Exchange.Application.CommandHandlers
 {
     using System;
     using System.Globalization;
     using System.Threading;
     using System.Threading.Tasks;
-    using Exchange.Domain.Commands;
+    using Exchange.Application.Commands;
     using Exchange.Domain.DTOs;
-    using Exchange.Domain.Factories.Contracts;
-    using Exchange.Domain.Validators;
+    using Exchange.Domain.Contracts;
+    using Exchange.Application.Validators;
     using MediatR;
 
     public class ExchangeCommandHandler : IRequestHandler<CalculateExchangeCommand, ValidateableResponse<ResultDto>>

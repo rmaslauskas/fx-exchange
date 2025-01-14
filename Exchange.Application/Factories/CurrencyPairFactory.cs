@@ -1,4 +1,4 @@
-﻿namespace Exchange.Domain.Factories
+﻿namespace Exchange.Application.Factories
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +7,6 @@
     using Exchange.Domain.Contracts;
     using Exchange.Domain.DTOs;
     using Exchange.Domain.Enums;
-    using Exchange.Domain.Factories.Contracts;
 
     public class CurrencyPairFactory : ICurrencyPairFactory
     {

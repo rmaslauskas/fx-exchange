@@ -4,11 +4,11 @@
     using System.Globalization;
     using System.Threading;
     using System.Threading.Tasks;
-    using Exchange.Domain.CommandHandlers;
-    using Exchange.Domain.Commands;
+    using Exchange.Application.CommandHandlers;
+    using Exchange.Application.Commands;
     using Exchange.Domain.Contracts;
     using Exchange.Domain.DTOs;
-    using Exchange.Domain.Factories;
+    using Exchange.Application.Factories;
     using FluentAssertions;
     using Microsoft.Extensions.Configuration;
     using NSubstitute;

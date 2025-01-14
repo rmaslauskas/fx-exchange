@@ -1,7 +1,7 @@
 ﻿namespace Exchange.Domain.UnitTests.Validators
 {
-    using Exchange.Domain.Commands;
-    using Exchange.Domain.Validators;
+    using Exchange.Application.Commands;
+    using Exchange.Application.Validators;
     using FluentAssertions;
     using NUnit.Framework;
     using System.Threading;

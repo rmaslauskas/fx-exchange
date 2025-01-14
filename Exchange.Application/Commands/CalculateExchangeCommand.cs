@@ -1,7 +1,7 @@
-﻿namespace Exchange.Domain.Commands
+﻿namespace Exchange.Application.Commands
 {
     using Exchange.Domain.DTOs;
-    using Exchange.Domain.Validators;
+    using Exchange.Application.Validators;
     using MediatR;
 
     public class CalculateExchangeCommand : IRequest<ValidateableResponse<ResultDto>>

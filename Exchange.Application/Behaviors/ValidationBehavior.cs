@@ -1,9 +1,9 @@
-﻿namespace Exchange.Domain.Behaviors
+﻿namespace Exchange.Application.Behaviors
 {
     using System;
     using System.Threading;
     using System.Threading.Tasks;
-    using Exchange.Domain.Validators;
+    using Exchange.Application.Validators;
     using FluentValidation;
     using MediatR;
 

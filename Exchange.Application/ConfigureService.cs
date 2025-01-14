@@ -1,19 +1,19 @@
-﻿namespace Exchange.Domain
+﻿namespace Exchange.Application
 {
-    using Exchange.Domain.Behaviors;
-    using Exchange.Domain.Factories;
-    using Exchange.Domain.Factories.Contracts;
+    using Exchange.Application.Behaviors;
+    using Exchange.Application.Factories;
+    using Exchange.Domain.Contracts;
     using FluentValidation;
     using MediatR;
     using Microsoft.Extensions.DependencyInjection;
     using System;
 
-    public static class DomainModule
+    public static class ConfigureService
     {
-        public static IServiceCollection AddDomainModule(this IServiceCollection services)
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
-            services.AddValidatorsFromAssembly(typeof(DomainModule).Assembly);
+            services.AddValidatorsFromAssembly(typeof(ConfigureService).Assembly);
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
             services.AddTransient<ICurrencyPairFactory, CurrencyPairFactory>();
 

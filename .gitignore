@@ -1,4 +1,6 @@
 .vs/
+Exchange.ConsoleApp/bin/
+Exchange.ConsoleApp/obj/
 Exchange.Application/bin/
 Exchange.Application/obj/
 Exchange.Domain/bin/

@@ -7,8 +7,7 @@
     using Exchange.Domain.Contracts;
     using Exchange.Domain.DTOs;
     using Exchange.Domain.Enums;
-    using Exchange.Domain.Factories;
-    using Exchange.Domain.Factories.Contracts;
+    using Exchange.Application.Factories;
     using FluentAssertions;
     using Microsoft.Extensions.Configuration;
     using NSubstitute;

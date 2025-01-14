@@ -1,4 +1,4 @@
-﻿namespace Exchange.Domain.Validators
+﻿namespace Exchange.Application.Validators
 {
     using System.Collections.Generic;
     using FluentValidation.Results;

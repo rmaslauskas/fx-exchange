@@ -3,7 +3,7 @@
     using System;
     using System.Globalization;
     using System.Linq;
-    using Exchange.Domain.Commands;
+    using Exchange.Application.Commands;
     using MediatR;
     using Microsoft.Extensions.CommandLineUtils;
 
