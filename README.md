@@ -26,9 +26,8 @@ Exchange.exe EUR/DKK 1
 
 ## Configuration
 
-For configuration, please, edit ./Echange.Application/appsettings.json file:
+For configuration, please, edit ./Echange.ConsoleApp/appsettings.json file:
 ```json
-// Example configuration settings
 {
   "ExchangeRatesAPI": <REMOTE_API_URL>
 }
