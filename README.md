@@ -14,13 +14,13 @@ The application is a Foreign Exchange (FX) Conversion System designed to facilit
 git clone https://github.com/rmaslauskas/fx-exchange.git
 cd ./fx-exchange
 dotnet restore
-dotnet build
+dotnet publish -c Release -o dist
 ```
 
 ## Running Solution
 
 ```bash
-cd ./Exchange.ConsoleApp/bin/Debug/net8.0
+cd ./dist
 Exchange.exe EUR/DKK 1  
 ```
 
