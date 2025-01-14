@@ -6,7 +6,7 @@
     public class ValidateableResponse<TModel> : ValidateableResponseBase
         where TModel : class
     {
-        public ValidateableResponse(TModel model, IList<ValidationFailure> validationErrors = null)
+        public ValidateableResponse(TModel model, IList<ValidationFailure>? validationErrors = null)
             : base(validationErrors)
         {
             Result = model;

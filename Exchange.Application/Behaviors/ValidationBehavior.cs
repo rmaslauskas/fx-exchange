@@ -30,7 +30,7 @@
                     var invalidResponseType = typeof(ValidateableResponse<>).MakeGenericType(resultType);
 
                     var invalidResponse =
-                        (TResponse)Activator.CreateInstance(invalidResponseType, null, result.Errors);
+                        (TResponse)Activator.CreateInstance(invalidResponseType, null, result.Errors)!;
 
                     return invalidResponse;
                 }

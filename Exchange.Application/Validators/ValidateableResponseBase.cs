@@ -10,7 +10,7 @@
     {
         private readonly IList<string> _errors;
 
-        public ValidateableResponseBase(IList<ValidationFailure> errors = null)
+        public ValidateableResponseBase(IList<ValidationFailure>? errors = null)
         {
             _errors = errors != null
                 ? errors.Select(
